@@ -1,1 +1,17 @@
+npm install --save discord-webhooks
 
+const DiscordWebhook = require("discord-webhooks");
+
+let myWebhook = new DiscordWebhook("https://discordapp.com/api/webhooks/channel_id/token")
+
+myWebhook.on("ready", () => {
+    myWebhook.execute({
+        content:"Hello from a webhook",
+        username:"Mr Webhook",
+        avatar_url:"https://example.com/image.png"
+    });
+});
+
+myWebhook.on("error", (error) => {
+  console.warn(error);
+});
