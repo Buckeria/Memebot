@@ -1,17 +1,16 @@
-npm install --save discord-webhooks
-
-const DiscordWebhook = require("discord-webhooks");
-
-let myWebhook = new DiscordWebhook("https://discordapp.com/api/webhooks/channel_id/token")
-
-myWebhook.on("ready", () => {
-    myWebhook.execute({
-        content:"Hello from a webhook",
-        username:"Mr Webhook",
-        avatar_url:"https://example.com/image.png"
-    });
-});
-
-myWebhook.on("error", (error) => {
-  console.warn(error);
-});
+{
+    "name": "Memebot",
+    "channel_id": "306448143007088641",
+    "token": "eFFrsnhOxX1esBtSypAh-7C_Pvbr-2jmGPIIJtcTmDFR2XM06Zz-UvoAt4FZinHamS1v",
+    "avatar": null,
+    "guild_id": "306448143007088641",
+    "id": "339223421152002048",
+    "user": {
+        "username": "Memebot",
+        "discriminator": "7479",
+        "id": "190320984123768832",
+        "avatar": "f31c285923404157e44cd175743d5adc"
+    }
+}
+GET /webhooks/{webhook.id}/{webhook.token}
+//POST /channels/{339223421152002048}/{eFFrsnhOxX1esBtSypAh-7C_Pvbr-2jmGPIIJtcTmDFR2XM06Zz-UvoAt4FZinHamS1v}
